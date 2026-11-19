@@ -1,6 +1,8 @@
 //Goal: Build a simple front-end app that uses data returned from one api to make a request to another api
 //to create something that would be beneficial to a Med Spa
 
+
+
 // Display: updates the page
 class Display {
   constructor() {
@@ -19,6 +21,7 @@ class Display {
 
 
   showProduct(product) {
+    this.productSection.hidden = false;
     this.image.src = product.image_front_url;
     this.name.textContent = product.product_name_en || product.product_name;
     this.brand.textContent = product.brands;
@@ -62,6 +65,8 @@ class ProductAPI {
   }
 }
 
+
+
 // IngredientAPI: API 2 - uses ingredient name from API 1 to search Wikipedia
 class IngredientAPI {
   constructor(display) {
@@ -90,6 +95,9 @@ class IngredientAPI {
   }
 }
 
+
+
+
 // App: connects the page to the APIs
 class App {
   constructor() {
@@ -110,14 +118,15 @@ class App {
     });
   }
 
+
+
   search() {
     const searchTerm = this.input.value.trim();
-
     if (searchTerm === "") {
       this.display.showMessage("Please enter a product.");
       return;
     }
-
+    this.display.productSection.hidden = true;
     this.productAPI.search(searchTerm);
   }
 }
