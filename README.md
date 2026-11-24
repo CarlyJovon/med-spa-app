@@ -2,6 +2,8 @@
 A web application that allows users to search for beauty products, view product details, and learn more about ingredients.
 <img width="1724" height="942" alt="Screenshot 2026-11-18 at 7 38 21 PM" src="https://github.com/user-attachments/assets/b24594ee-724d-43ea-8665-f85a7b7ef282" />
 
+## Live Demo 
+[Try out the Beauty Product Ingredient Checker here!](https://med-spa-app.onrender.com)
 ## Features
 - Search beauty products by name
 - View product images, brand names, and ingredient lists
